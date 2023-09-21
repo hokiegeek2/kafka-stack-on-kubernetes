@@ -85,12 +85,12 @@ readinessProbe:
 
 #### Persistent Volumes
 
-The initial KSOK Kafka deployment utilizes the manual storage class, with files written to the Kafka pod host machines. Accordingly, there are three persistentvolume files that need to be deployed, as follows, before the Kafka helm install:
+The initial KSOK Kafka deployment utilizes the manual storage class, with files written to the Kafka pod host machines. Accordingly, there are three persistentvolume files that need to be deployed before the Kafka helm install.
+
+Before using the bundled pv files, the spec.nodeAffinity.required.nodeSelectorTerms.matchExpressions.values entry in each file needs to be changed to a hostname or ip address corresponding to the desired Kafka host. Once the PV files are updated, execute the following command:
 
 ```
-kubectl apply -f kafka-logs-manual-pv-1.yaml 
-kubectl apply -f kafka-logs-manual-pv-2.yaml 
-kubectl apply -f kafka-logs-manual-pv-3.yaml 
+sh create-pv.sh
 ```
 
 ### Helm Install Command
