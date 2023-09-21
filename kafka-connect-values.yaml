@@ -1,0 +1,25 @@
+kafka:
+  bootstrapServers: "PLAINTEXT://kafka-headless.kafka:9092" 
+
+cp-schema-registry:
+  url: kafka-schema-registry.kafka"
+
+<<<<<<< HEAD
+serviceType: LoadBalancer
+
+prometheus:
+  jmx:
+    enabled: false
+
+livenessProbe:
+  httpGet:
+     path: /connectors
+     port: 8083
+  initialDelaySeconds: 60
+  periodSeconds: 5
+  failureThreshold: 10
+=======
+prometheus:
+  jmx:
+    enabled: false
+>>>>>>> a10413a... initial checkin

@@ -1,0 +1,4 @@
+kafka:
+  enabled: false
+externalKafka:
+  brokers: ["PLAINTEXT://kafka-0.kafka-headless.kafka.svc.cluster.local:9092"]
