@@ -98,8 +98,8 @@ sh create-pv.sh
 There is currently an issue with the latest version of the bitnami/kafka helm chart:
 
 ```
-helm install -f kafka-schema-registry-values.yaml -n kafka kafka bitnami/kafka
-Error: parse error at (schema-registry/charts/common/templates/_labels.tpl:14): unclosed action
+helm install -f kafka-values.yaml -n kafka kafka bitnami/kafka
+Error: parse error at (kafka/charts/common/templates/_labels.tpl:14): unclosed action
 ```
 
 Accordingly, need to rollback to an earlier version, resulting in the following helm install command:
