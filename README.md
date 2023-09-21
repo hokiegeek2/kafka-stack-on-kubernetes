@@ -167,6 +167,7 @@ helm install -f kafka-schema-registry-values.yaml -n kafka kafka-schema-registry
 helm repo add confluentinc https://confluentinc.github.io/cp-helm-charts/
 helm repo update
 ```
+While Confluent offers a helm repository, there appears to issues with the cp-helm-charts helm repo. Consequently, its better to clone the git repo and install locally.
 
 #### values.yaml
 
@@ -183,6 +184,8 @@ cp-schema-registry:
 #### Helm Install Command
 
 ```
+git clone git@github.com:confluentinc/cp-helm-charts.git
+
 helm install -f kafka-connect-values.yaml kafka-connect -n kafka cp-helm-charts/cp-kafka-connect
 ```
 
