@@ -148,11 +148,8 @@ existingLog4jConfigMap: ""
 heapOpts: -Xmx1024m -Xms1024m
 ## @param deleteTopicEnable Switch to enable topic deletion or not
 ##
-<<<<<<< HEAD
 deleteTopicEnable: true
-=======
-deleteTopicEnable: false
->>>>>>> a10413a... initial checkin
+
 ## @param autoCreateTopicsEnable Switch to enable auto creation of topics. Enabling auto creation of topics not recommended for production or similar environments
 ##
 autoCreateTopicsEnable: true
@@ -476,13 +473,8 @@ containerPorts:
 ##
 livenessProbe:
   enabled: true
-<<<<<<< HEAD
   initialDelaySeconds: 120
   timeoutSeconds: 30
-=======
-  initialDelaySeconds: 45
-  timeoutSeconds: 5
->>>>>>> a10413a... initial checkin
   failureThreshold: 3
   periodSeconds: 10
   successThreshold: 1
@@ -495,15 +487,9 @@ livenessProbe:
 ##
 readinessProbe:
   enabled: true
-<<<<<<< HEAD
   initialDelaySeconds: 120
   failureThreshold: 3
   timeoutSeconds: 30
-=======
-  initialDelaySeconds: 45
-  failureThreshold: 3
-  timeoutSeconds: 5
->>>>>>> a10413a... initial checkin
   periodSeconds: 10
   successThreshold: 1
 ## @param startupProbe.enabled Enable startupProbe on Kafka containers
