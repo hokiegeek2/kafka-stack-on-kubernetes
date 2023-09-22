@@ -186,7 +186,7 @@ cp-schema-registry:
 ```
 git clone git@github.com:confluentinc/cp-helm-charts.git
 
-helm install -f kafka-connect-values.yaml kafka-connect -n kafka cp-helm-charts/cp-kafka-connect
+helm install -f kafka-connect-values.yaml kafka-connect -n kafka cp-helm-charts/charts/cp-kafka-connect
 ```
 
 ## Kafka UI

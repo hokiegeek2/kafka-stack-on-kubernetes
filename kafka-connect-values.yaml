@@ -4,7 +4,6 @@ kafka:
 cp-schema-registry:
   url: kafka-schema-registry.kafka"
 
-<<<<<<< HEAD
 serviceType: LoadBalancer
 
 prometheus:
@@ -15,11 +14,6 @@ livenessProbe:
   httpGet:
      path: /connectors
      port: 8083
-  initialDelaySeconds: 60
-  periodSeconds: 5
+  initialDelaySeconds: 120
+  periodSeconds: 30
   failureThreshold: 10
-=======
-prometheus:
-  jmx:
-    enabled: false
->>>>>>> a10413a... initial checkin
